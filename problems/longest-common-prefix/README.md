@@ -33,10 +33,10 @@ What is a prefix? A word that is before another word.
 What is a common prefix between two strings? A word that is common before both strings.
 
 
-### Longest prefix for 1 string = entire string\
-How can we find the longest common prefix for 2 strings?\
-1. We will check the start of each string if both characters match\
-2. If they match, we will check the next character and so on\
+### Longest prefix for 1 string = entire string
+How can we find the longest common prefix for 2 strings?
+1. We will check the start of each string if both characters match
+2. If they match, we will check the next character and so on
 3. Once either string ends or we found a mismatch in character, the prefix found is the longest common prefix
 
 ```python3 []
@@ -53,9 +53,9 @@ Space complexity: O(prefix) if include the prefix substring created
 
 
 
-### How can we extend this to multiple strings?\
-1. We could do this pairwise comparison\
-2. LCP(word1, word2 ... wordn) = LCP( LCP( LCP(word1, word2), word3), word4) ... wordn)\
+### How can we extend this to multiple strings?
+1. We could do this pairwise comparison
+2. LCP(word1, word2 ... wordn) = LCP( LCP( LCP(word1, word2), word3), word4) ... wordn)
 3. We will run LCP on word1 and word2, the result of this is a prefix. We then run this prefix with word3 and so on until the last word
 
 ```python3 []
@@ -85,9 +85,9 @@ We create new substrings each pairwise comparison. In theory, we could just retu
 
 ## Brute force -- vertical comparisons
 
-Instead of comparing 2 strings at a time, we can check all N strings for each increment prefix length\
-1. We check prefix of length 1 across all N strings. If they are the same, we check for length 2\
-2. We repeat until length M where either string ends or there is a mismatch. In this case, we just return the longest common prefix found\
+Instead of comparing 2 strings at a time, we can check all N strings for each increment prefix length
+1. We check prefix of length 1 across all N strings. If they are the same, we check for length 2
+2. We repeat until length M where either string ends or there is a mismatch. In this case, we just return the longest common prefix found
 3. After we check for any mismatch, if there isn't any, we will return the first string as it is the longest common prefix for all strings
 
 ```python3 []
